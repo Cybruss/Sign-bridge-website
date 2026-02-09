@@ -74,13 +74,14 @@ body {
 }
 
 .logo {
-    width: 48px;
-    height: 48px;
-    border-radius: 0;
-    background: transparent;
-    padding: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: #ffffff;
+    padding: 4px;
     display: block;
     object-fit: contain;
+    box-shadow: 0 4px 12px rgba(45, 55, 72, 0.12);
 }
 
 .brand-name {
@@ -890,33 +891,89 @@ body {
 .status.completed {
     background: #D1FAE5;
     color: #065F46;
-}
-
-.status.in-progress {
+    margin: 2rem auto 1.5rem;
+    max-width: 980px;
+    width: 100%;
     background: #DBEAFE;
     color: #1E40AF;
-}
-
-.status.upcoming {
+    height: 760px;
     background: #E0E7FF;
     color: #5B21B6;
 }
 
-/* Proposal Grid */
-.proposal-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-top: 3rem;
+/* Proposal Section */
+.proposal-download-section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.proposal-card {
-    background: white;
-    padding: 2rem;
+.proposal-download {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.proposal-viewer {
+    background: #ffffff;
     border-radius: 20px;
     box-shadow: var(--shadow-soft);
-    text-align: center;
+    overflow: hidden;
+    margin: 2rem auto 1rem;
+    max-width: 980px;
+    width: 100%;
+}
+
+.proposal-viewer iframe {
+    width: 100%;
+    height: 760px;
+    border: 0;
+}
+
+.proposal-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.9rem 1.6rem;
+    background: linear-gradient(135deg, var(--primary-soft), var(--secondary-soft));
+    color: #ffffff;
+    font-weight: 600;
+    border-radius: 999px;
+    text-decoration: none;
+    box-shadow: var(--shadow-soft);
     transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.proposal-btn:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: var(--shadow-hover);
+}
+
+.proposal-btn:active {
+    transform: translateY(-1px) scale(0.99);
+}
+
+.proposal-btn::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 50%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.35);
+    transform: rotate(25deg);
+    transition: transform 0.6s ease;
+}
+
+.proposal-btn:hover::after {
+    transform: translateX(220%) rotate(25deg);
+}
+
+.proposal-btn:focus-visible {
+    outline: 3px solid rgba(107, 142, 247, 0.4);
+    outline-offset: 4px;
 }
 
 .proposal-card:hover {

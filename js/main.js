@@ -1,6 +1,15 @@
 // Sign Bridge - Main JavaScript
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Proposal viewer (Google Docs)
+    const proposalFrame = document.getElementById('proposal-frame');
+    if (proposalFrame && !proposalFrame.getAttribute('src')) {
+        const docUrl = proposalFrame.getAttribute('data-doc-url');
+        if (docUrl) {
+            proposalFrame.src = docUrl;
+        }
+    }
+
     // Mobile Menu Toggle
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
