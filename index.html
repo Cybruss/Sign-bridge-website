@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sign Bridge - Real-Time Sign Language Translation Mobile Application">
+    <title>Sign Bridge | FYP 2026</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <img src="sign_bridge_logo.svg" alt="Sign Bridge Logo" class="logo">
+                <span class="brand-name">Sign Bridge</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#problem">Problem</a></li>
+                <li><a href="#solution">Solution</a></li>
+                <li><a href="#methodology">Methodology</a></li>
+                <li><a href="#team">Team</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="badge">Final Year Project 2026</span>
+                <h1 class="hero-title">Sign Bridge</h1>
+                <p class="hero-subtitle">Real-Time Sign Language Translation Mobile Application</p>
+                <p class="hero-description">
+                    On-device AI-powered mobile app that translates sign language gestures into text and text into sign language guidance—bridging communication gaps for the deaf community.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>Mobile-First</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-bolt"></i>
+                        <span>Real-Time</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-brain"></i>
+                        <span>AI-Powered</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://media.istockphoto.com/id/1056692270/photo/two-young-woman-speak-in-sign-language.jpg?s=612x612&w=0&k=20&c=-lTCGlavZnMbI24hIOugy92zr_0SvZ9qVSWIPR_QLZw=" alt="Sign Bridge App Mockup" class="mockup-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section id="overview" class="section overview-section">
+        <div class="container">
+            <h2 class="section-title">Project Overview</h2>
+            <p class="section-intro">
+                Sign Bridge is a mobile application designed to facilitate real-time communication between deaf and hearing individuals through advanced computer vision and machine learning technologies.
+            </p>
+            <div class="overview-grid">
+                <div class="info-card">
+                    <div class="card-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Objective</h3>
+                    <p>Develop a mobile application that enables seamless, real-time translation between sign language gestures and text using on-device machine learning models.</p>
+                </div>
+                <div class="info-card">
+                    <div class="card-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Target Users</h3>
+                    <p>Deaf and hard-of-hearing individuals, their families, educators, and anyone who needs to communicate across the hearing-deaf divide.</p>
+                </div>
+                <div class="info-card">
+                    <div class="card-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3>Technology</h3>
+                    <p>Flutter for cross-platform UI, Kotlin for native Android processing, MediaPipe for hand tracking, and TensorFlow Lite for gesture classification.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Work & Existing Solutions -->
+    <section class="section related-work-section">
+        <div class="container">
+            <h2 class="section-title">Related Work & Existing Solutions</h2>
+            <p class="section-intro">
+                Several approaches to sign language recognition exist, each with unique strengths and limitations.
+            </p>
+            <div class="comparison-grid">
+                <div class="work-card">
+                    <h4>Cloud-Based Solutions</h4>
+                    <div class="work-meta">
+                        <span class="tech-badge">Server-side ML</span>
+                        <span class="tech-badge">High Latency</span>
+                    </div>
+                    <p>Systems like SignAll and Microsoft's Sign Language Translator rely on cloud processing, requiring constant internet connectivity and introducing latency (5-10 seconds).</p>
+                    <div class="limitations">
+                        <strong>Limitations:</strong> Internet dependency, privacy concerns, delayed response time
+                    </div>
+                </div>
+                <div class="work-card">
+                    <h4>Wearable-Based Systems</h4>
+                    <div class="work-meta">
+                        <span class="tech-badge">Sensor Gloves</span>
+                        <span class="tech-badge">Hardware Required</span>
+                    </div>
+                    <p>Projects using data gloves with flex sensors provide high accuracy but require specialized hardware that is expensive and impractical for daily use.</p>
+                    <div class="limitations">
+                        <strong>Limitations:</strong> Cost-prohibitive, hardware dependency, limited adoption
+                    </div>
+                </div>
+                <div class="work-card">
+                    <h4>Single-Hand Detection Apps</h4>
+                    <div class="work-meta">
+                        <span class="tech-badge">Mobile Vision</span>
+                        <span class="tech-badge">Limited Vocabulary</span>
+                    </div>
+                    <p>Existing mobile apps detect only one hand at a time, restricting vocabulary to simple one-handed gestures and missing complex bi-manual signs.</p>
+                    <div class="limitations">
+                        <strong>Limitations:</strong> Incomplete sign support, no sentence building, word-level only
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Statement -->
+    <section id="problem" class="section problem-section">
+        <div class="container">
+            <h2 class="section-title">Why This Project is Needed</h2>
+            <div class="problem-content">
+                <div class="problem-stats">
+                    <div class="stat-box">
+                        <h3>70M+</h3>
+                        <p>Deaf individuals worldwide</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>&lt;5%</h3>
+                        <p>Access to sign language interpreters</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>$150+</h3>
+                        <p>Average hourly interpreter cost</p>
+                    </div>
+                </div>
+                <div class="problem-list">
+                    <div class="problem-item">
+                        <i class="fas fa-times-circle"></i>
+                        <div>
+                            <h4>Communication Barriers</h4>
+                            <p>Deaf individuals face daily struggles in healthcare, education, employment, and social interactions due to communication gaps.</p>
+                        </div>
+                    </div>
+                    <div class="problem-item">
+                        <i class="fas fa-times-circle"></i>
+                        <div>
+                            <h4>Interpreter Shortage</h4>
+                            <p>Severe global shortage of certified sign language interpreters makes professional services inaccessible and expensive.</p>
+                        </div>
+                    </div>
+                    <div class="problem-item">
+                        <i class="fas fa-times-circle"></i>
+                        <div>
+                            <h4>Limited Digital Solutions</h4>
+                            <p>Current mobile solutions lack real-time capability, require internet connectivity, or provide incomplete sign language support.</p>
+                        </div>
+                    </div>
+                    <div class="problem-item">
+                        <i class="fas fa-times-circle"></i>
+                        <div>
+                            <h4>Privacy Concerns</h4>
+                            <p>Cloud-based translation systems expose sensitive conversations to external servers, raising privacy and security issues.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Solution -->
+    <section id="solution" class="section solution-section">
+        <div class="container">
+            <h2 class="section-title">Our Solution</h2>
+            <p class="section-intro">
+                Sign Bridge addresses these challenges through an innovative mobile-first approach with dual-direction translation capabilities.
+            </p>
+            
+            <!-- Sign to Text Flow -->
+            <div class="flow-container">
+                <h3 class="flow-title">
+                    <i class="fas fa-hand-paper"></i>
+                    Sign Language → Text Translation
+                </h3>
+                <div class="flow-diagram">
+                    <div class="flow-step">
+                        <div class="step-number">1</div>
+                        <div class="step-icon"><i class="fas fa-camera"></i></div>
+                        <h4>Camera Capture</h4>
+                        <p>User performs sign gestures in front of the device camera at 30 FPS</p>
+                    </div>
+                    <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+                    <div class="flow-step">
+                        <div class="step-number">2</div>
+                        <div class="step-icon"><i class="fas fa-hand-sparkles"></i></div>
+                        <h4>Hand Detection</h4>
+                        <p>MediaPipe detects both hands simultaneously with 42 landmark points</p>
+                    </div>
+                    <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+                    <div class="flow-step">
+                        <div class="step-number">3</div>
+                        <div class="step-icon"><i class="fas fa-layer-group"></i></div>
+                        <h4>Sequence Buffer</h4>
+                        <p>System collects 30 frames (1 second) of landmark data for temporal analysis</p>
+                    </div>
+                    <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+                    <div class="flow-step">
+                        <div class="step-number">4</div>
+                        <div class="step-icon"><i class="fas fa-brain"></i></div>
+                        <h4>AI Classification</h4>
+                        <p>TFLite model identifies the sign from 250+ vocabulary with confidence scores</p>
+                    </div>
+                    <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+                    <div class="flow-step">
+                        <div class="step-number">5</div>
+                        <div class="step-icon"><i class="fas fa-spell-check"></i></div>
+                        <h4>Sentence Building</h4>
+                        <p>Detected signs accumulate into complete sentences with 1.5s cooldown timing</p>
+                    </div>
+                </div>
+                <div class="flow-description">
+                    <p><strong>Key Features:</strong> Dual-hand support enables complex bi-manual signs • On-device processing ensures privacy • No internet required • Real-time feedback with confidence indicators</p>
+                </div>
+            </div>
+
+            <!-- Text to Sign Flow -->
+            <div class="flow-container reverse">
+                <h3 class="flow-title">
+                    <i class="fas fa-keyboard"></i>
+                    Text → Sign Language Guidance
+                </h3>
+                <div class="flow-diagram">
+                    <div class="flow-step">
+                        <div class="step-number">1</div>
+                        <div class="step-icon"><i class="fas fa-i-cursor"></i></div>
+                        <h4>Text Input</h4>
+                        <p>User types or speaks a phrase they want to learn in sign language</p>
+                    </div>
+                    <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+                    <div class="flow-step">
+                        <div class="step-number">2</div>
+                        <div class="step-icon"><i class="fas fa-sitemap"></i></div>
+                        <h4>Phrase Parsing</h4>
+                        <p>NLP breaks down the sentence into individual sign-mappable words</p>
+                    </div>
+                    <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+                    <div class="flow-step">
+                        <div class="step-number">3</div>
+                        <div class="step-icon"><i class="fas fa-book"></i></div>
+                        <h4>Sign Mapping</h4>
+                        <p>System matches each word to corresponding sign gesture from the vocabulary</p>
+                    </div>
+                    <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+                    <div class="flow-step">
+                        <div class="step-number">4</div>
+                        <div class="step-icon"><i class="fas fa-hand-point-right"></i></div>
+                        <h4>Visual Guide</h4>
+                        <p>App displays step-by-step visual instructions for performing each sign</p>
+                    </div>
+                    <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+                    <div class="flow-step">
+                        <div class="step-number">5</div>
+                        <div class="step-icon"><i class="fas fa-play-circle"></i></div>
+                        <h4>Practice Mode</h4>
+                        <p>User practices signs with real-time feedback and validation</p>
+                    </div>
+                </div>
+                <div class="flow-description">
+                    <p><strong>Key Features:</strong> Bidirectional learning tool • Visual sign demonstrations • Step-by-step guidance • Practice mode with feedback • Educational for hearing users</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Methodology & Technologies -->
+    <section id="methodology" class="section methodology-section">
+        <div class="container">
+            <h2 class="section-title">Methodology & Technologies</h2>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <div class="tech-header">
+                        <i class="fab fa-android"></i>
+                        <h3>Flutter + Kotlin</h3>
+                    </div>
+                    <p class="tech-role">Cross-Platform Framework</p>
+                    <p>Flutter provides beautiful, responsive UI with single codebase for Android/iOS, while Kotlin handles native Android processing via MethodChannel for optimal performance.</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-header">
+                        <i class="fas fa-hand-paper"></i>
+                        <h3>MediaPipe</h3>
+                    </div>
+                    <p class="tech-role">Hand Landmark Detection</p>
+                    <p>Google's MediaPipe HandLandmarker provides real-time detection of 21 landmark points per hand with high accuracy (~30ms processing time) running entirely on-device.</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-header">
+                        <i class="fas fa-brain"></i>
+                        <h3>TensorFlow Lite</h3>
+                    </div>
+                    <p class="tech-role">Machine Learning</p>
+                    <p>Lightweight TFLite models classify sign gestures from landmark sequences. Models are quantized for mobile deployment with 250+ sign vocabulary and 85-92% accuracy.</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-header">
+                        <i class="fas fa-video"></i>
+                        <h3>CameraX</h3>
+                    </div>
+                    <p class="tech-role">Camera Framework</p>
+                    <p>Android CameraX API provides consistent camera access across devices with optimized frame processing pipeline for real-time computer vision applications.</p>
+                </div>
+            </div>
+
+            <!-- Architecture Diagram -->
+            <div class="architecture-section">
+                <h3>System Architecture</h3>
+                <div class="architecture-diagram">
+                    <img src="system_architecture.jpeg" alt="System Architecture Diagram" class="arch-img">
+                </div>
+                <div class="architecture-details">
+                    <div class="arch-detail">
+                        <h4><i class="fas fa-layer-group"></i> Layer 1: Presentation</h4>
+                        <p>Flutter UI layer handles user interactions, displays results, and manages application state with clean, accessible interface design.</p>
+                    </div>
+                    <div class="arch-detail">
+                        <h4><i class="fas fa-exchange-alt"></i> Layer 2: Bridge</h4>
+                        <p>MethodChannel facilitates bidirectional communication between Flutter (Dart) and native Android code (Kotlin) for performance-critical operations.</p>
+                    </div>
+                    <div class="arch-detail">
+                        <h4><i class="fas fa-microchip"></i> Layer 3: Processing</h4>
+                        <p>Native Kotlin layer manages camera streams, invokes MediaPipe models, runs TFLite inference, and implements sequence buffering logic.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Modules -->
+    <section class="section modules-section">
+        <div class="container">
+            <h2 class="section-title">Main Modules</h2>
+            <div class="modules-grid">
+                <div class="module-card">
+                    <div class="module-number">01</div>
+                    <h3>Camera & Frame Capture</h3>
+                    <p>Initializes device camera, configures optimal settings for gesture detection, and streams frames at 30 FPS to the processing pipeline.</p>
+                    <ul class="module-features">
+                        <li>CameraX integration</li>
+                        <li>Real-time preview</li>
+                        <li>Frame optimization</li>
+                    </ul>
+                </div>
+                <div class="module-card">
+                    <div class="module-number">02</div>
+                    <h3>Hand Landmark Detection</h3>
+                    <p>Uses MediaPipe to detect and track both hands simultaneously, extracting 21 normalized landmark coordinates per hand with confidence scores.</p>
+                    <ul class="module-features">
+                        <li>Dual-hand tracking</li>
+                        <li>42 total landmarks</li>
+                        <li>Confidence filtering</li>
+                    </ul>
+                </div>
+                <div class="module-card">
+                    <div class="module-number">03</div>
+                    <h3>Sequence Buffer Manager</h3>
+                    <p>Maintains a sliding window buffer of 30 consecutive frames, creating temporal sequences for classification and managing data flow.</p>
+                    <ul class="module-features">
+                        <li>30-frame buffer</li>
+                        <li>Temporal analysis</li>
+                        <li>Data normalization</li>
+                    </ul>
+                </div>
+                <div class="module-card">
+                    <div class="module-number">04</div>
+                    <h3>Sign Classifier</h3>
+                    <p>TFLite model performs inference on buffered sequences, outputting probability distributions across 250+ sign vocabulary with confidence thresholds.</p>
+                    <ul class="module-features">
+                        <li>250+ signs</li>
+                        <li>85-92% accuracy</li>
+                        <li>Confidence scoring</li>
+                    </ul>
+                </div>
+                <div class="module-card">
+                    <div class="module-number">05</div>
+                    <h3>Sentence Builder</h3>
+                    <p>Accumulates detected signs into coherent sentences with intelligent cooldown timing (1.5s) to prevent duplicate detections and enable natural pacing.</p>
+                    <ul class="module-features">
+                        <li>Auto-accumulation</li>
+                        <li>Cooldown management</li>
+                        <li>Edit capabilities</li>
+                    </ul>
+                </div>
+                <div class="module-card">
+                    <div class="module-number">06</div>
+                    <h3>Text-to-Sign Mapper</h3>
+                    <p>Parses text input, maps words to sign vocabulary, and generates visual guidance for users to learn and practice corresponding sign gestures.</p>
+                    <ul class="module-features">
+                        <li>NLP parsing</li>
+                        <li>Sign mapping</li>
+                        <li>Visual guides</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expected Flow & Timeline -->
+    <section class="section timeline-section">
+        <div class="container">
+            <h2 class="section-title">Development Timeline & Expected Flow</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-flag-checkered"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Phase 1: Foundation (Weeks 1-4)</h3>
+                        <ul>
+                            <li>Literature review and requirement analysis</li>
+                            <li>Technology stack finalization</li>
+                            <li>Flutter project setup and UI mockups</li>
+                            <li>Data collection and preprocessing pipeline</li>
+                        </ul>
+                        <span class="status completed">Completed</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Phase 2: Core Development (Weeks 5-10)</h3>
+                        <ul>
+                            <li>MediaPipe integration and hand detection</li>
+                            <li>TFLite model training and optimization</li>
+                            <li>Sequence buffering implementation</li>
+                            <li>MethodChannel communication setup</li>
+                        </ul>
+                        <span class="status in-progress">In Progress</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Phase 3: Integration & Testing (Weeks 11-14)</h3>
+                        <ul>
+                            <li>Sentence building logic implementation</li>
+                            <li>Text-to-sign mapping module</li>
+                            <li>UI/UX refinement and polishing</li>
+                            <li>Performance optimization and testing</li>
+                        </ul>
+                        <span class="status upcoming">Upcoming</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Phase 4: Finalization (Weeks 15-16)</h3>
+                        <ul>
+                            <li>User acceptance testing with deaf community</li>
+                            <li>Documentation and final report preparation</li>
+                            <li>Demo video and presentation materials</li>
+                            <li>Final presentation and project submission</li>
+                        </ul>
+                        <span class="status upcoming">Upcoming</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Proposal Highlights -->
+    <section class="section proposal-section">
+        <div class="container">
+            <h2 class="section-title">Project Proposal Highlights</h2>
+            <div class="proposal-grid">
+                <div class="proposal-card">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Innovation</h3>
+                    <p>First mobile app combining dual-hand detection with sentence-level translation and bidirectional learning capabilities, all running on-device for privacy.</p>
+                </div>
+                <div class="proposal-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Social Impact</h3>
+                    <p>Empowers 70M+ deaf individuals worldwide with accessible, free communication tool, reducing dependency on expensive interpreters.</p>
+                </div>
+                <div class="proposal-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Privacy-First</h3>
+                    <p>100% on-device processing means no data leaves the phone—no cloud uploads, no server logging, complete user privacy guaranteed.</p>
+                </div>
+                <div class="proposal-card">
+                    <i class="fas fa-rocket"></i>
+                    <h3>Scalability</h3>
+                    <p>Extensible architecture allows adding new sign languages (BSL, LSF, JSL), emotion detection, and advanced NLP features in future iterations.</p>
+                </div>
+                <div class="proposal-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Expected Outcomes</h3>
+                    <p>85-92% sign recognition accuracy, <2s response time, 250+ sign vocabulary, positive user feedback from accessibility community.</p>
+                </div>
+                <div class="proposal-card">
+                    <i class="fas fa-globe"></i>
+                    <h3>Future Scope</h3>
+                    <p>iOS support, multi-language expansion, facial expression analysis, avatar-based sign animation, and integration with video call platforms.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="section team-section">
+        <div class="container">
+            <h2 class="section-title">Project Team</h2>
+            <p class="section-intro">A dedicated team working under expert supervision to deliver this innovative solution.</p>
+            
+            <!-- Supervisor Card -->
+            <div class="supervisor-card">
+                <div class="supervisor-avatar">
+                    <img src="https://ww2.comsats.edu.pk/faculty/FacultyPics/31_10_2022_12_51_25_4432981.jpg" alt="Supervisor" class="avatar-img">
+                </div>
+                <div class="supervisor-info">
+                    <h3>Dr. Usama Ijaz Ahmad Bajwa</h3>
+                    <p class="role">Project Supervisor</p>
+                    <p class="affiliation">Associate Professor , Computer Science, CUI Lahore Campus</p>
+                    <p class="bio">Expert in Machine Learning, Artificial Intelligence, and Assistive Technologies with 15+ years of research experience.</p>
+                    <div class="supervisor-links">
+                        <a href="mailto:usamabajwa@cuilahore.edu.pk"><i class="fas fa-envelope"></i> Email</a>
+                        <a href="https://www.linkedin.com/in/usamabajwa"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                        <a href="https://ww2.comsats.edu.pk/faculty/FacultyDetails.aspx?Uid=29390" target="_blank"><i class="fas fa-globe"></i> Profile</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Members -->
+            <div class="team-grid">
+                <div class="team-card lead">
+                    <div class="team-badge">Project Lead</div>
+                    <div class="team-avatar">
+                        <img src="https://media.licdn.com/dms/image/v2/D4D03AQEGSpNmYOJzhg/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1719342229440?e=1771459200&v=beta&t=7NughN3_2C4bljX5ojuOToMXzHOmkNnGo36MzH1lcGM" alt="Abdur Rehman Zubair" class="avatar-img">
+                    </div>
+                    <h3>Abdur Rehman Zubair</h3>
+                    <p class="team-role">Flutter Developer & Lead</p>
+                    <p class="team-bio">Leads project architecture and cross-platform development. Manages Flutter UI, state management, and overall project coordination.</p>
+                    <div class="team-skills">
+                        <span>Flutter</span>
+                        <span>Dart</span>
+                        <span>UI/UX</span>
+                    </div>
+                    <div class="team-socials">
+                        <a href="https://github.com/Cybruss" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/abdur-rehman-zubair" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCXJC1yOI9NYOHEtLcuFVn44ElOIlUOd8JMw&sg" alt="Team Member 2" class="avatar-img">
+                    </div>
+                    <h3>Mehroz Sajjad</h3>
+                    <p class="team-role">ML Engineer & Android Developer</p>
+                    <p class="team-bio">Handles machine learning model training, TensorFlow Lite integration, and native Android processing with Kotlin.</p>
+                    <div class="team-skills">
+                        <span>ML/AI</span>
+                        <span>Kotlin</span>
+                        <span>TensorFlow</span>
+                    </div>
+                    <div class="team-socials">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <img src="https://media.licdn.com/dms/image/v2/D4D35AQGdL3wyJPDSUw/profile-framedphoto-shrink_200_200/B4DZpvjWYwHsAY-/0/1762808129368?e=1770757200&v=beta&t=p4Cz0t_X31JvFowjm8Z3ODfq2J9mhjncQ7eeRnJxRg4" alt="Team Member 3" class="avatar-img">
+                    </div>
+                    <h3>Bushra Jabbar</h3>
+                    <p class="team-role">Computer Vision & UI/UX Designer</p>
+                    <p class="team-bio">Implements MediaPipe integration, designs user interface, and ensures accessibility compliance for deaf users.</p>
+                    <div class="team-skills">
+                        <span>MediaPipe</span>
+                        <span>UI/UX</span>
+                        <span>Accessibility</span>
+                    </div>
+                    <div class="team-socials">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="http://www.linkedin.com/in/bushra-jabbar-5870a2350" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+{
+  "buildCommand": "echo 'Static site - no build needed'",
+  "installCommand": "echo 'No dependencies to install'",
+  "outputDirectory": ".",
+  "github": {
+    "enabled": true,
+    "autoAlias": true,
+    "autoJobCancelation": true
+  },
+  "env": [
+    {
+      "key": "ENVIRONMENT",
+      "value": "production"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, no-store, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "name": "sign-bridge-landing",
+  "version": "1.0.0",
+  "description": "Professional landing page for Sign Bridge - Real-time ASL/ISL to English translation",
+  "main": "index.html",
+  "author": "Sign Bridge Team",
+  "license": "MIT",
+  "keywords": [
+    "sign-language",
+    "accessibility",
+    "asl",
+    "isl",
+    "translation",
+    "mobile-app",
+    "mediapipe",
+    "tensorflow",
+    "landing-page"
+  ],
+  "scripts": {
+    "start": "http-server -p 8000 -o",
+    "dev": "http-server -p 8000 --cors",
+    "build": "echo 'Static site, no build needed'",
+    "test": "echo 'No tests configured'"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/website_sign_bridge.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/website_sign_bridge/issues"
+  },
+  "homepage": "https://yourusername.github.io/website_sign_bridge",
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

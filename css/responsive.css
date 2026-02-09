@@ -1,0 +1,118 @@
+/* Responsive Design for Sign Bridge */
+
+/* Tablet (768px and below) */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    /* Navigation */
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background: white;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        padding: 2rem 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    /* Hero */
+    .hero .container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .hero-stats {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Grids */
+    .overview-grid,
+    .comparison-grid,
+    .tech-grid,
+    .architecture-details,
+    .modules-grid,
+    .proposal-grid,
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Problem Section */
+    .problem-content {
+        grid-template-columns: 1fr;
+    }
+
+    /* Flow */
+    .flow-diagram {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .flow-arrow {
+        transform: rotate(90deg);
+        margin: 0.5rem 0;
+    }
+
+    /* Supervisor */
+    .supervisor-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .supervisor-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+    .section {
+        padding: 3rem 0;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero {
+        padding: 3rem 0;
+    }
+
+    .flow-container {
+        padding: 1.5rem;
+    }
+
+    .flow-title {
+        font-size: 1.3rem;
+    }
+
+    .team-grid {
+        gap: 1.5rem;
+    }
+}
