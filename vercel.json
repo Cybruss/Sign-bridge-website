@@ -7,12 +7,9 @@
     "autoAlias": true,
     "autoJobCancelation": true
   },
-  "env": [
-    {
-      "key": "ENVIRONMENT",
-      "value": "production"
-    }
-  ],
+  "env": {
+    "ENVIRONMENT": "production"
+  },
   "headers": [
     {
       "source": "/api/(.*)",
