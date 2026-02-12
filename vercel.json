@@ -33,7 +33,11 @@
         },
         {
           "key": "Content-Security-Policy",
-          "value": "frame-ancestors 'self' https://sites.google.com https://*.google.com https://google.com https://*.googleusercontent.com"
+          "value": "frame-ancestors 'self' https://sites.google.com https://*.google.com https://google.com https://*.googleusercontent.com;"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "ALLOWALL"
         }
       ]
     }
